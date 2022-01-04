@@ -18,6 +18,7 @@ public class Program {
 		try {
 			connection = DB.getConnection();
 			statement = connection.createStatement();
+
 			resultSet = statement.executeQuery("select * from department");
 			while (resultSet.next()) {
 				System.out.println(resultSet.getInt("Id")+","+ resultSet.getString("Name"));
